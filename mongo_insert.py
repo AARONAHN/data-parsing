@@ -1,9 +1,11 @@
-from pymongo import MongoClient
 import random
+from mongodb import MongoDB
 
-client = MongoClient(host='localhost', port=27017)
+# client = MongoClient(host='localhost', port=27017)
 
-db = client.aaron_db
+client = MongoDB()
+
+db = client.session.aaron_db
 
 language = ['EN', 'francais', 'vietnamese', 'espanol', '??? ???', '한국어']
 country_code = ['US', 'KR', 'JP', 'VT', 'CN', 'FR']
